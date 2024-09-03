@@ -1,0 +1,43 @@
+﻿Build started 03.09.2024 21:32:45.
+     1>Project "C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\BO2.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\BO2.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\CL.exe /c /I..\xkelib /Zi /nologo /W0 /WX- /Ox /Os /D NDEBUG /D _XBOX /GF /Gm- /MT /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp- /Yu"StdAfx.h" /Fp"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP Game.cpp /FI"C:\Program Files (x86)\Microsoft Xbox 360 SDK\\include\xbox\xbox_intellisense_platform.h"
+         Game.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\xkelib xapilib.lib d3d9.lib d3dx9.lib xgraphics.lib xboxkrnl.lib xnet.lib xaudio2.lib xact3.lib x3daudio.lib xmcore.lib vcomp.lib /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.pdb" /STACK:"262144","262144" /OPT:REF /OPT:ICF /TLBID:1 /RELEASE /IMPLIB:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.lib" Release\Addresses.obj
+         Release\Aimbot.obj
+         Release\AuthProvider.obj
+         Release\AuthProvider.obj
+         Release\Autowall.obj
+         Release\Definitions.obj
+         Release\Detour.obj
+         Release\Game.obj
+         Release\Globals.obj
+         Release\Hooks.obj
+         Release\MemoryManager.obj
+         Release\Menu.obj
+         Release\Render.obj
+         Release\Spinbot.obj
+         Release\stdafx.obj
+         Release\Structs.obj
+         Release\Utilities.obj
+         Release\Vector.obj
+         Release\Visuals.obj
+         Release\Engine.obj /ignore:4089 /dll /ALIGN:128,4096 /XEX:NO
+     1>Release\AuthProvider.obj : warning LNK4042: object specified more than once; extras ignored
+       ImageXex:
+         C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\imagexex.exe /out:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.xex" /config:"Engine.xml" "C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.exe" 
+         Microsoft(R) Xbox 360 Image File Builder Version 2.0.21256.0
+         (c)2012 Microsoft Corporation. All rights reserved.
+         
+       FinalizeBuildStatus:
+         Deleting file "Release\BO2.unsuccessfulbuild".
+         Touching "Release\BO2.lastbuildstate".
+     1>Done Building Project "C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster\XBOX360LSBEST Offhost Remaster\BO2\BO2\BO2.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.62

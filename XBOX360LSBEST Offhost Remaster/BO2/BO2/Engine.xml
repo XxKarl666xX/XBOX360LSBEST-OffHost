@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xex>
+  <baseaddr addr="0x90C00000"/>
+  <sysdll/>
+  <format>
+    <compressed/>
+  </format>
+  <mediatypes>
+    <default/>
+    <allpackages/>
+  </mediatypes>
+  <gameregion>
+    <all/>
+  </gameregion>
+  <titleid id="0xFFFE07D1"/> 
+  <version major="2" minor="0" build="17559" qfe="0"/>
+</xex>

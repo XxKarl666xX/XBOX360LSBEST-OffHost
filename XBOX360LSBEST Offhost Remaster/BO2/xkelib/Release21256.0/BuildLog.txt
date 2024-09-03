@@ -1,0 +1,9 @@
+﻿  The system cannot find the path specified.
+  Microsoft (R) Library Manager Version 10.00.11886.00
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+     Creating library xamext.lib and object xamext.exp
+  Microsoft (R) Library Manager Version 10.00.11886.00
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+     Creating library kernelext.lib and object kernelext.exp

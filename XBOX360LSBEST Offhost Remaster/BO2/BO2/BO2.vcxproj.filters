@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\aimbot">
+      <UniqueIdentifier>{4a9e7be3-2bfe-468f-831c-1f3fab1b4a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utilities">
+      <UniqueIdentifier>{2dbf5c09-2617-4dfa-b0bc-5eb38724e0ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vector">
+      <UniqueIdentifier>{78fedf2a-e876-4b2b-97ed-bcc62b201017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render">
+      <UniqueIdentifier>{fff4687e-a52a-4a17-b8a1-46b699f3a487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\visuals">
+      <UniqueIdentifier>{95f55ba2-0743-4418-b87a-3a8f2281c850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\definitions">
+      <UniqueIdentifier>{757fabeb-f8ad-4a05-90d6-deda8d0c3c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks">
+      <UniqueIdentifier>{78c59a74-08fc-4c75-9035-d82149034da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\structs">
+      <UniqueIdentifier>{1cec2a05-a930-4a75-920a-23d4d057a5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\globals">
+      <UniqueIdentifier>{57284eb6-e65c-4a26-8a4c-b21ecd1ea529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\menu">
+      <UniqueIdentifier>{d55381b0-7acf-4f45-bd89-aa51734e1f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CustomAppendum">
+      <UniqueIdentifier>{7cdf9043-c718-4b7a-93f4-c675ff6c680c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="Engine.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Addresses.h">
+      <Filter>Source Files\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Source Files\aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="Definitions.h">
+      <Filter>Source Files\definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="Detour.h">
+      <Filter>Source Files\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files\definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
+      <Filter>Source Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Source Files\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.h">
+      <Filter>Source Files\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Source Files\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Source Files\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Structs.h">
+      <Filter>Source Files\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Source Files\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Source Files\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManager.h">
+      <Filter>Source Files\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Autowall.h">
+      <Filter>Source Files\aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="Spinbot.h">
+      <Filter>Source Files\aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="bo2_AdressHelper.h">
+      <Filter>Source Files\CustomAppendum</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>Source Files\CustomAppendum</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Addresses.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Source Files\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Definitions.cpp">
+      <Filter>Source Files\definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="Detour.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="Render.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.cpp">
+      <Filter>Source Files\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Structs.cpp">
+      <Filter>Source Files\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source Files\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManager.cpp">
+      <Filter>Source Files\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Autowall.cpp">
+      <Filter>Source Files\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Spinbot.cpp">
+      <Filter>Source Files\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthProvider.cpp">
+      <Filter>Source Files\CustomAppendum</Filter>
+    </ClCompile>
+    <ClCompile Include="AuthProvider.h">
+      <Filter>Source Files\CustomAppendum</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
