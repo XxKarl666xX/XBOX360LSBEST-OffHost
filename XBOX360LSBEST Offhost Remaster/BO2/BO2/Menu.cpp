@@ -622,7 +622,16 @@ void Menu::HandleMenu() {
 	Menu(NULL).ResetVars();
 }
 
-
+//toggle options, why? no clue yet, and i also dont care for my ce as those options aint needed... except no sway/no recoil...
+void Menu::HandleOptions() {
+	if (CG::bInGameCached && CG::bLobbyInitialized) {
+		Game::ToggleNoRecoil(&CG::NoRecoil);
+		Game::ToggleNoSway(&CG::NoSway);
+		Game::ToggleVSAT(&CG::VSAT);
+		Game::ToggleThirdPerson(&CG::ThirdPerson);
+		Game::SetFOV(CG::fFovValue);
+	}
+}
 
 
 
@@ -646,7 +655,7 @@ void Menu::Update() {
 
 	HandleInput();
 	HandleMenu();
-	
+	HandleOptions();
 
 
 	//this is the notify that happens if you inject the menu. there is a checker box as there is the first "" empty after the "0". here would go a symbol... im so fucking tired right now as I allways do this around 20/21 pm after a workday...

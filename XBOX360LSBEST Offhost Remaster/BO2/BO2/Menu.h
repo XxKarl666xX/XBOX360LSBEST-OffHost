@@ -68,7 +68,7 @@ public:
 	static void HandleInput();
 	static int ReturnCorrectSubmenu();
 	static void HandleMenu();
-	
+	static void HandleOptions();
 	static void Update();
 };
 
