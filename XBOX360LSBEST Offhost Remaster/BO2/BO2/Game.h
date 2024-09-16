@@ -25,11 +25,7 @@ public:
 	static QWORD GetXUIDFromNetInfo(int index, BOOL read = FALSE);
 	static void CacheSignInState();
 	static bool FixGamertag();
-	static void ResetGamertag();
 	static string BuildUserInfoString(string name, string clantag, string xuid);
-	static void SetIngameInfo(string clantag, string gamertag);
-	static void SetGamertag(string gamertag);
-	static void SetIPtoGamertag(int ClientNum);
 	static void ModGamertag();
 
 	static void ToggleNoRecoil(BOOL* bState);

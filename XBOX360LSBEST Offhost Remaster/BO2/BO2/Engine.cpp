@@ -52,30 +52,7 @@ void GameThread() {
 					}
 				}
 
-				if (CG::bLaunchCustomGTEntry) {
-					CG::bLaunchCustomGTEntry = FALSE;
-
-					wchar_t wcOldGT[33];
-					wchar_t wcGT[33];//dev___1_
-					XOVERLAPPED XOver;
-					ZeroMemory(&XOver, sizeof(XOVERLAPPED));
-					XShowKeyboardUI(0, VKBD_HIGHLIGHT_TEXT, wcOldGT, L"Enter Gamertag", L"Max Length 32 chars.", wcGT, 33, &XOver);
-
-					while (!XHasOverlappedIoCompleted(&XOver)) Sleep(25);
-
-					Sleep(100);
-
-					if (wcGT[0] != 0 && wcGT[1] != 0)
-					{
-						wcscpy_s(wcOldGT, wcGT);
-						wcstombs(OriginalGT, wcGT, 33);
-
-						Game::SetIngameInfo("", OriginalGT);
-
-						strcpy((char*)Security->addrs.GT_Addrs[0], OriginalGT);
-						strcpy((char*)Security->addrs.GT_Addrs[1], OriginalGT);
-					}
-				}
+				
 
 
 

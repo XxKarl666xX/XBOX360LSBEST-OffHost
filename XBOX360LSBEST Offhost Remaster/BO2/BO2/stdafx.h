@@ -37,3 +37,4 @@ using namespace std;
 #include "Menu.h"
 #include "Hooks.h"
 #include <xkelib.h>
+#include "XNotify.h"

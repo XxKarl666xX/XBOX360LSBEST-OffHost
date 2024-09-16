@@ -190,12 +190,6 @@ bool Game::FixGamertag() {
 	return false;
 }
 
-void Game::ResetGamertag() {
-	
-		//blank cause testing some stuff turned out to not work. also no need for this gamertag bs
-	
-}
-
 string Game::BuildUserInfoString(string name, string clantag, string xuid) {
 	string userInfoString;
 	userInfoString = "userinfo \"\\rate\\20000\\snaps\\20\\name\\" + name;
@@ -204,57 +198,7 @@ string Game::BuildUserInfoString(string name, string clantag, string xuid) {
 	userInfoString += "\\xuid\\000" + xuid + "\\natType\\1\\rank\\1\\prestige\\0\"";
 	return userInfoString;
 }
-void Game::SetIngameInfo(string clantag, string gamertag) {
-	if (CG::bInGameCached && CG::bLobbyInitialized) {
-		char buff[17] = { 0 };
-		string userinfo = BuildUserInfoString(gamertag, clantag, _ui64toa(GetXUIDFromNetInfo(cg->clientNumber, TRUE), buff, 0x10));
 
-		CL_AddReliableCommand(0, (PCHAR)userinfo.c_str());
-	}
-}
-
-void Game::SetGamertag(string gamertag) {
-	strcpy(OriginalGT, gamertag.c_str());
-
-	SetIngameInfo("", OriginalGT);
-
-	strcpy((char*)Security->addrs.GT_Addrs[0], OriginalGT);
-	strcpy((char*)Security->addrs.GT_Addrs[1], OriginalGT);
-}
-
-void Game::SetIPtoGamertag(int ClientNum) {
-	if (netInfo[ClientNum].XUID != 0) {
-		char Name[0x50];
-		sprintf(Name, "%s=%i.%i.%i.%i", netInfo[ClientNum].Gamertag, netInfo[ClientNum].externalIP[0], netInfo[ClientNum].externalIP[1], netInfo[ClientNum].externalIP[2], netInfo[ClientNum].externalIP[3]);
-		SetGamertag(Name);
-	}
-}
-
-DWORD dwLastRainbowTime = 0;
-int iLastColor = 0;
-void Game::ModGamertag() {
-	if (CG::dwRainbowGT) {
-		if (dwLastRainbowTime < GetTickCount()) {
-			dwLastRainbowTime = GetTickCount() + (!CG::bInGameCached ? CG::dwRainbowDelay : (CG::dwRainbowDelay < 1500 ? 1500 : CG::dwRainbowDelay));
-
-			iLastColor += 1;
-			if (iLastColor >= 7)
-				iLastColor = 1;
-
-
-			char Color[0xA], PregameName[0x50];
-
-			sprintf(Color, "^%i", iLastColor);
-			sprintf(PregameName, "^%i%s", iLastColor, OriginalGT);
-
-			SetIngameInfo(Color, OriginalGT);
-
-			strcpy((char*)Security->addrs.GT_Addrs[0], PregameName);
-			strcpy((char*)Security->addrs.GT_Addrs[1], PregameName);
-
-		}
-	}
-}
 
 void Game::ToggleNoRecoil(BOOL* bState) {
 	DWORD dwNoRecoil = Security->addrs.NoRecoil;

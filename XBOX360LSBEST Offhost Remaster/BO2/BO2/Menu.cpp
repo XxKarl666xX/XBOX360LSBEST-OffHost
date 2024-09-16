@@ -17,13 +17,9 @@ int SelectedPlayer = -1;
 
 BOOL negativeBoolean = FALSE;
 char* aimbotstatus="Aimbot Active";
-char* antiaimstatus="Antiaim Active";//not needed
 static bool AntiaimButtonPressed = false;
 static bool ESPButtonPressed = false;
-//static bool crashButton = false; //used for the game crash option, take the comment out to use it
 char* espstatus="ESP Active";
-
-
 
 //how the following works: I got a pointer that goes up in value. The pointer points to a item in a list, the pointed to item will be displayed in the message. If the pointer is higher then the overall list size it gets reset to 0 > goes to the start again
 //this seems atleast for me like the easiest way to implement the messages. This can be changed and made more effective if one really wants to.
@@ -35,10 +31,6 @@ static int currentIndex = 1;
 //silentaim
 char* TargetTypesList[0x2] = { "SilentAim: ^1OFF", "SilentAim: ^2ON" };
 static int SilentAimIndex = 0;
-
-//esp
-char* DrawingTypesList[5] = { "2D Filled",  "3D", "None", "Corners", "2D" };
-static int ESPIndex = 4;
 
 //aimbone
 char* AimTagsList[0x10] = { "AimBone Set To: ^2j_helmet", "AimBone Set To: ^2j_head", "AimBone Set To: ^2j_neck", "AimBone Set To: ^2j_shoulder_le", "AimBone Set To: ^2j_shoulder_ri", "AimBone Set To: ^2j_mainroot", "AimBone Set To: ^2j_elbow_le", "AimBone Set To: ^2j_elbow_ri", "AimBone Set To: ^2j_wrist_le", "AimBone Set To: ^2j_wrist_ri", "AimBone Set To: ^2j_spineupper", "AimBone Set To: ^2j_spinelower", "AimBone Set To: ^2j_knee_le", "AimBone Set To: ^2j_knee_ri", "AimBone Set To: ^2j_ankle_le", "AimBone Set To: ^2j_ankle_ri" };
@@ -134,26 +126,6 @@ if (UIItems.optionCount == 1 && UIItems.submenu == MAIN_MENU) {
     AuthProvider::GetFunction(BO2_MP_TU18_CG_GameMessage)(0, aimbotstatus);
 } 
 
-
-
-//else if (UIItems.optionCount == 9 && UIItems.submenu == MAIN_MENU) {
-//    // Toggle the AntiaimButtonPressed flag
-//    crashButton = !crashButton;
-//
-//    // Check the state of AntiaimButtonPressed to determine which message to print
-//    if (crashButton) {
-//        // sending the basic server crash bs thanks to appendum, thank you very much appendum dev
-//		AuthProvider::GetFunction(BO2_MP_TU18_Cbuf_AddText)(0, "cmd sl");
-//    } else {
-//        AuthProvider::GetFunction(BO2_MP_TU18_Cbuf_AddText)(0, "cmd sl");//sending it again if button was again pressed
-//    }
-//    // Sends after the crash a message, if you see this then the host cant be crashed... sowwy
-//    AuthProvider::GetFunction(BO2_MP_TU18_CG_GameMessage)(0, "^1Host cant be crashed...");
-//} delete this comment to get functionality back, again, not needed here but i use this button in the experimantal version as its useful for overall playing
-
-
-
-
 else if (UIItems.optionCount == 2 && UIItems.submenu == MAIN_MENU) {//im manually setting the esp states because i was too lazy to create a own function for that. as Todd Howard once said "It just works."
     // Toggle the AntiaimButtonPressed flag
     ESPButtonPressed = !ESPButtonPressed;
@@ -227,17 +199,7 @@ inline Menu Menu::ArrayEditor(T arr, int* identifier, int len) {
         SilentAimIndex = 0;
     }
 	}
-		else if(UIItems.optionCount==2 && UIItems.submenu == MAIN_MENU){
-		AuthProvider::GetFunction(BO2_MP_TU18_CG_GameMessage)(0, DrawingTypesList[ESPIndex]);
-    
-    // Increment the index to point to the next option
-    ESPIndex++;
-
-    // Loop back to the beginning if we reach the end of the list
-    if (ESPIndex > 4) {
-        ESPIndex = 0;
-    }
-	}
+		
 
 		else if(UIItems.optionCount==6 && UIItems.submenu == MAIN_MENU){
 		AuthProvider::GetFunction(BO2_MP_TU18_CG_GameMessage)(0, AimTagsList[AimboneIndex]);
@@ -416,12 +378,7 @@ inline Menu Menu::ChangeBoolean(BOOL* toChange, BOOL value) {
 	return *this;
 }
 
-template<typename T>
-inline Menu Menu::SetGamertag(T function) {
-	if (UIItems.currentOption == UIItems.optionCount && UIItems.optionPress)
-		function(this->option);
-	return *this;
-}
+
 
 bool buttonFinished;
 void Menu::HandleInput() {
@@ -493,9 +450,7 @@ char* tabs[7] = { NULL, "^4XBOX360LSBEST OffHost:", "A", "B", "C", "^4Clients:",
 int Menu::ReturnCorrectSubmenu() {
 	int currentSub = UIItems.submenu;
 
-	if (currentSub == GAMERTAG_MANAGER)
-		currentSub = MISCELLANEOUS;
-	else if (currentSub == CLIENT_MANAGER)
+	if (currentSub == CLIENT_MANAGER)
 		currentSub = CLIENTS;
 
 	return currentSub;
@@ -513,20 +468,9 @@ void Menu::HandleMenu() {
 		//the background in the different sections of the offhost
 		if (UIItems.submenu == MAIN_MENU)
 			height = (5 * 22.0f);
-		else if (UIItems.submenu == MISCELLANEOUS)
-			height = (7 * 22.0f);
-		else if (UIItems.submenu == GAMERTAG_MANAGER)
-			height = (4 * 22.0f);
 		else if (UIItems.submenu == CLIENT_MANAGER)
 			height = (4 * 7.0f);
-		else if (UIItems.submenu == AIMBOT)
-			height = (7 * 22.0f);
-		else if (UIItems.submenu == VISUALS)
-			height = (9 * 22.0f);
-		else if (UIItems.submenu == SPINBOT_MENU)
-			height = (3 * 22.0f);
-		else if (UIItems.submenu == GAMERTAG_MANAGER)
-			height = (4 * 22.0f);
+		
 		//overall background of the offhost
 		Render::DrawShader(UIItems.m_PosX, UIItems.m_PosY, UIItems.m_Width, (height + 160.0f), CG::dwWhite, colorBackground);
 		//permanent heading, not needed for us
@@ -585,10 +529,8 @@ void Menu::HandleMenu() {
 		Menu("Toggle FakeLag").Toggle(&CG::customToggleOption); //here is normally the fakelag, need to add fake lag yet, for now a option that does NOTHING
 		Menu("Toggle AimBone").ArrayEditor(AimTags[CG::dwAimTag], (int*)&CG::dwAimTag, ARRAYSIZE(AimTags));//same as antiaim
 		Menu("Toggle SilentAim").ArrayEditor(TargetTypes[CG::dwTargetType], (int*)&CG::dwTargetType, ARRAYSIZE(TargetTypes));
-		//Menu("Toggle LeaveGame").Option().Callback(Game::LeaveGame);//this isnt in the original menu... but one really needs it... will make it to be bound to a shortcut in future, same as crash game...
-		//Menu("Toggle ServerCrash").Toggle(&CG::customToggleOption); //this option normally doesent extit, but one can use it if wanted
 		//here is a sub menu, you can see this by the term ".Submenu" lol
-		//it calls the sub menu we defined before in 
+		//it calls the sub menu we defined before
 		Menu("Client List").Submenu(CLIENTS);
 		break;
 
@@ -660,9 +602,18 @@ void Menu::Update() {
 
 	//this is the notify that happens if you inject the menu. there is a checker box as there is the first "" empty after the "0". here would go a symbol... im so fucking tired right now as I allways do this around 20/21 pm after a workday...
 	if (bReadyToNotify) {
-		UI_OpenToastPopup(0, "", "XBOX360LSBEST Offhost:", "BO2 Aimbot + ESP Loaded!", 2500);
+		UI_OpenToastPopup(0, "", "XBOX360LSBEST OffHost:", "BO2 Aimbot + ESP Loaded!", 2500);
 		*(DWORD*)0x826A5FBC = 0x60000000;//unlimited class items after the notify, you could do more memory editing here, seems to work good enough.
-		
+		//nopping all cheat protection, thanks to this source: www.se7ensins.com/forums/threads/bo2-tu18-offsets-list-w-some-bytes.1659296
+		*(DWORD*)0x82497EB0 = 0x60000000;
+		*(DWORD*)0x82497F30 = 0x60000000;
+		*(DWORD*)0x82497EE0 = 0x60000000;
+		*(DWORD*)0x82497EC8 = 0x60000000;
+		*(DWORD*)0x825996AC = 0x60000000;
+		*(DWORD*)0x8259A65C = 0x60000000; //should be all needed ones, please correct me if im wrong, i dont need this just yet, delete if you dont wanna do console commands
+
+		*(DWORD*)0x82003f70 = 0x00000000; //for showing host, doing it just as XBOX360LSBEST did in his shittool
+		*(BYTE*)0x83C5A3BB = 0x01; //this sets the show host shit to true
 		
 
 		bReadyToNotify = FALSE;

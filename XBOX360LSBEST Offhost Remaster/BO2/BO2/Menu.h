@@ -5,13 +5,10 @@
 enum Submenu_s {
 	CLOSED = 0,
 	MAIN_MENU = 1,
-	MISCELLANEOUS = 2,
-	AIMBOT = 3,
-	VISUALS = 4,
-	CLIENTS = 5, //this is my "custom" sub menu which can be seen in Menu.cpp at the MAIN_MENU section. any other shit can be deleted...
-	CLIENT_MANAGER = 6,
-	GAMERTAG_MANAGER = 7,
-	SPINBOT_MENU = 8
+	
+	CLIENTS = 2, //this is my "custom" sub menu which can be seen in Menu.cpp at the MAIN_MENU section. any other shit can be deleted...
+	CLIENT_MANAGER = 3,
+	
 };
 
 struct UIItems_s {

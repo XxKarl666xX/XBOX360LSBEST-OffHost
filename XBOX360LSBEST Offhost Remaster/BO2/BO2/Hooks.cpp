@@ -39,7 +39,7 @@ void SND_EndFrameHook() {
 			CG::bLobbyInitialized = FALSE;
 		}
 
-		Game::ModGamertag();
+		
 		Menu::Update();
 		Visuals::HandleVisuals();
 	}
