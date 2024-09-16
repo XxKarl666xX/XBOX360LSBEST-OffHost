@@ -10,7 +10,7 @@ The source I build it upon is "MyDarling V1"<br/>
 Message features and a few others like cbuf stuff were ported from "Appendum"<br/>
 All needed changes were made to the properties, it should compile out of the box without any problems.<br/>
 
-I also made a little text guide on how to build your first ever .xex as something like that wasnt done properly before. The written guide is baded off of this video which was made by "Silent Knight": <br/>
+I also made a little text guide on how to build your first ever .xex as something like that wasnt done properly before. The written guide is based off of this video which was made by "Silent Knight": <br/>
 https://www.youtube.com/watch?v=AoYClMFvg8U&t=131s<br/>
 This video is the only video that shows how one would build a .xex, I dont get why people havent done more documentation about this topic. I couldnt find any other help online at all, even though others also have asked about this sort of stuff...<br/>
 <br/>
