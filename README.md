@@ -22,8 +22,8 @@ This offhost certainly wont be 'THE BEST SOLUTION FOR EVERYBODY IN THE WHOLE WOR
 <br/>
 *To ADD/FIX:<br/>*
 Some antiaim presets are wrong<br/>
-healtbar on damage needs to be implemented<br/>
+healthbar on damage needs to be implemented<br/>
 need to add fakelag<br/>
 make the "visible" aimbottype work<br/>
 need to implement offhost crash<br/>
-make leave game/crash server bind to a button<br/>
+make leave game/crash server bind to a button so it can be used but doesent ruin the look or feel<br/>
