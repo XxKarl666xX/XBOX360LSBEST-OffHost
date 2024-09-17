@@ -442,8 +442,8 @@ void Menu::HandleInput() {
 		buttonFinished = false;
 	}
 }
-//these are the headings i guess, //22.08.2024 i stil dont know why i needed to fill these with data/why its this order. i know it didnt want to work otherwise but still... why? 
-char* tabs[7] = { NULL, "^4XBOX360LSBEST OffHost:", "A", "B", "C", "^4Clients:", "D"};
+//used for the headings of the different tabs > main menu and client list(if no user is selected), data needed to be filled as the tabs count is 7, change it later!!!
+char* tabs[7] = { NULL, "^4XBOX360LSBEST OffHost:", "^4Clients:", "B", "C", "A", "D"};
 
 
 //this is the sub menu logic, so it knows into which submenu it goes when going though sub menus INSIDE sub menus.
