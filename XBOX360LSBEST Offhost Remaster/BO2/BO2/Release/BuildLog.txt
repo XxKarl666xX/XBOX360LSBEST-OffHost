@@ -1,11 +1,13 @@
-﻿Build started 16.09.2024 19:45:49.
+﻿Build started 20.09.2024 20:43:53.
      1>Project "C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster Normal\XBOX360LSBEST-OffHost\XBOX360LSBEST Offhost Remaster\BO2\BO2\BO2.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Release\BO2.unsuccessfulbuild".
+         Creating "Release\BO2.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          All outputs are up-to-date.
          C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\CL.exe /c /I..\xkelib /Zi /nologo /W0 /WX- /Ox /Os /D NDEBUG /D _XBOX /GF /Gm- /MT /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp- /Yu"StdAfx.h" /Fp"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster Normal\XBOX360LSBEST-OffHost\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /TP Menu.cpp /FI"C:\Program Files (x86)\Microsoft Xbox 360 SDK\\include\xbox\xbox_intellisense_platform.h"
          Menu.cpp
+       MakeDirsForLink:
+         Creating directory "C:\Users\Bill\Desktop\eeee".
        Link:
          C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster Normal\XBOX360LSBEST-OffHost\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\xkelib xapilib.lib d3d9.lib d3dx9.lib xgraphics.lib xboxkrnl.lib xnet.lib xaudio2.lib xact3.lib x3daudio.lib xmcore.lib vcomp.lib /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster Normal\XBOX360LSBEST-OffHost\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.pdb" /STACK:"262144","262144" /OPT:REF /OPT:ICF /TLBID:1 /RELEASE /IMPLIB:"C:\Users\Bill\Desktop\xbox 360 RGH\own Offhost\XBOX360LSBEST Offhost Remaster Normal\XBOX360LSBEST-OffHost\XBOX360LSBEST Offhost Remaster\BO2\BO2\Release\BO2.lib" Release\Addresses.obj
          Release\Aimbot.obj
@@ -40,4 +42,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.69
+Time Elapsed 00:00:01.47
