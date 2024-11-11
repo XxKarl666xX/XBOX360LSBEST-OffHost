@@ -27,3 +27,5 @@ need to add fakelag<br/>
 make the "visible" aimbottype work<br/>
 need to implement offhost crash<br/>
 make leave game/crash server bind to a button so it can be used but doesent ruin the look or feel<br/>
+<br/>
+bind to open the offhost is "LT+RS"
